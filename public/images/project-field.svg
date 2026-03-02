@@ -1,0 +1,9 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="800" fill="#F7F3EE"/>
+  <rect x="140" y="240" width="920" height="360" rx="48" fill="#E4572E" fill-opacity="0.15"/>
+  <path d="M140 420H1060" stroke="#1C7C6E" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="320" cy="420" r="60" fill="#1C7C6E"/>
+  <circle cx="600" cy="420" r="60" fill="#1C7C6E"/>
+  <circle cx="880" cy="420" r="60" fill="#1C7C6E"/>
+  <text x="170" y="200" fill="#101417" font-size="40" font-family="Space Grotesk">Field Testing</text>
+</svg>

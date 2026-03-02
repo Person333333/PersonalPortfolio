@@ -1,0 +1,30 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SectionTitle from "../components/SectionTitle.astro";
+import { getEntry } from "astro:content";
+
+const profile = await getEntry("profile", "site");
+---
+<BaseLayout title="Contact — Nikhil V">
+  <section class="section">
+    <div class="container">
+      <SectionTitle
+        eyebrow="Contact"
+        title="Let’s connect"
+        description="For research mentorship, collaborations, and project opportunities."
+      />
+      <div class="grid grid-2">
+        <article class="card contact-card">
+          <h3>Email</h3>
+          <p class="subtle">{profile?.data.contact_email}</p>
+          <a class="text-link" href={`mailto:${profile?.data.contact_email}`}>Send email</a>
+        </article>
+        <article class="card contact-card">
+          <h3>LinkedIn</h3>
+          <p class="subtle">{profile?.data.linkedin_url}</p>
+          <a class="text-link" href={profile?.data.linkedin_url} target="_blank" rel="noreferrer">Visit profile</a>
+        </article>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

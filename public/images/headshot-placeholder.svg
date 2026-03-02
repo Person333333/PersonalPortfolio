@@ -1,0 +1,6 @@
+<svg width="900" height="1000" viewBox="0 0 900 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="1000" fill="#F7F3EE"/>
+  <circle cx="450" cy="380" r="200" fill="#1C7C6E" fill-opacity="0.18"/>
+  <rect x="220" y="580" width="460" height="280" rx="140" fill="#E4572E" fill-opacity="0.2"/>
+  <text x="160" y="140" fill="#101417" font-size="40" font-family="Fraunces">Headshot Placeholder</text>
+</svg>

@@ -1,0 +1,8 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="800" fill="#E4572E"/>
+  <rect x="160" y="140" width="880" height="520" rx="60" fill="#F7F3EE"/>
+  <path d="M260 540V320" stroke="#1C7C6E" stroke-width="16" stroke-linecap="round"/>
+  <path d="M400 540V280" stroke="#1C7C6E" stroke-width="16" stroke-linecap="round"/>
+  <path d="M540 540V360" stroke="#1C7C6E" stroke-width="16" stroke-linecap="round"/>
+  <text x="220" y="240" fill="#101417" font-size="44" font-family="Fraunces">FinanceMe</text>
+</svg>

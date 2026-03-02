@@ -1,0 +1,6 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="800" fill="#F7F3EE"/>
+  <path d="M140 180L360 260L560 200L760 280L980 220" stroke="#1C7C6E" stroke-width="12" stroke-linecap="round"/>
+  <path d="M140 560L360 480L560 560L760 480L980 560" stroke="#E4572E" stroke-width="12" stroke-linecap="round"/>
+  <text x="160" y="140" fill="#101417" font-size="40" font-family="Space Grotesk">Mapping & Logistics</text>
+</svg>

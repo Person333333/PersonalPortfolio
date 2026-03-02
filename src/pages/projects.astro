@@ -1,0 +1,48 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SectionTitle from "../components/SectionTitle.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import { getCollection } from "astro:content";
+
+const projects = await getCollection("projects");
+const sorted = projects.sort((a, b) => b.data.year - a.data.year);
+const categories = Array.from(new Set(sorted.map((p) => p.data.category)));
+---
+<BaseLayout title="Projects — Nikhil V">
+  <section class="section">
+    <div class="container">
+      <SectionTitle
+        eyebrow="Projects"
+        title="Systems built for real people"
+        description="Filter by category to explore research, civic tech, and applied ML builds."
+      />
+      <div class="filter-bar">
+        <button class="filter-button active" data-filter="all">All</button>
+        {categories.map((cat) => (
+          <button class="filter-button" data-filter={cat}>{cat}</button>
+        ))}
+      </div>
+      <div class="grid grid-3" id="project-grid">
+        {sorted.map((project) => (
+          <ProjectCard project={project} />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <script is:inline>
+    const buttons = document.querySelectorAll(".filter-button");
+    const cards = document.querySelectorAll("[data-project-card]");
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => {
+        buttons.forEach((btn) => btn.classList.remove("active"));
+        button.classList.add("active");
+        const filter = button.dataset.filter;
+        cards.forEach((card) => {
+          const category = card.dataset.category;
+          card.style.display = filter === "all" || filter === category ? "block" : "none";
+        });
+      });
+    });
+  </script>
+</BaseLayout>

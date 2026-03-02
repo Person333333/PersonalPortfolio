@@ -1,0 +1,91 @@
+backend:
+  name: git-gateway
+  branch: main
+media_folder: "public/uploads"
+public_folder: "/uploads"
+collections:
+  - name: "projects"
+    label: "Projects"
+    folder: "src/content/projects"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Student Names", name: "student_names", widget: "string", default: "Nikhil V" }
+      - { label: "Grade", name: "grade", widget: "string", required: false }
+      - { label: "Year", name: "year", widget: "number" }
+      - { label: "Category", name: "category", widget: "string" }
+      - { label: "Tags", name: "tags", widget: "list", default: [] }
+      - { label: "Summary", name: "summary", widget: "text" }
+      - { label: "Hero Image", name: "hero_image", widget: "image" }
+      - { label: "Gallery", name: "gallery", widget: "list", field: { label: "Image", name: "image", widget: "image" }, required: false }
+      - label: "Links"
+        name: "links"
+        widget: "list"
+        fields:
+          - { label: "Label", name: "label", widget: "string" }
+          - { label: "URL", name: "url", widget: "string" }
+      - { label: "Awards", name: "awards", widget: "string", required: false }
+      - { label: "Featured", name: "featured", widget: "boolean", default: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+  - name: "research"
+    label: "Research"
+    folder: "src/content/research"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Year", name: "year", widget: "number" }
+      - { label: "Summary", name: "summary", widget: "text" }
+      - { label: "Methods", name: "methods", widget: "list", default: [] }
+      - { label: "Results", name: "results", widget: "list", default: [] }
+      - { label: "Writeup Link", name: "writeup_link", widget: "string", required: false }
+      - label: "Media Links"
+        name: "media_links"
+        widget: "list"
+        fields:
+          - { label: "Label", name: "label", widget: "string" }
+          - { label: "URL", name: "url", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+  - name: "achievements"
+    label: "Achievements"
+    folder: "src/content/achievements"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Year", name: "year", widget: "number" }
+      - { label: "Rank", name: "rank", widget: "string" }
+      - { label: "Organization", name: "organization", widget: "string" }
+      - { label: "Proof Link", name: "proof_link", widget: "string", required: false }
+      - { label: "Body", name: "body", widget: "markdown", required: false }
+  - name: "leadership"
+    label: "Leadership & Service"
+    folder: "src/content/leadership"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Role", name: "role", widget: "string" }
+      - { label: "Impact", name: "impact", widget: "text" }
+      - { label: "Year", name: "year", widget: "number" }
+      - { label: "Link", name: "link", widget: "string", required: false }
+      - { label: "Body", name: "body", widget: "markdown", required: false }
+  - name: "profile"
+    label: "Profile"
+    files:
+      - label: "Site"
+        name: "site"
+        file: "src/content/profile/site.json"
+        format: "json"
+        fields:
+          - { label: "Full Name", name: "full_name", widget: "string" }
+          - { label: "Preferred Name", name: "preferred_name", widget: "string" }
+          - { label: "School Program", name: "school_program", widget: "string" }
+          - { label: "Intended Major", name: "intended_major", widget: "string" }
+          - { label: "GPA", name: "gpa", widget: "string" }
+          - { label: "Test Scores", name: "test_scores", widget: "string" }
+          - { label: "Contact Email", name: "contact_email", widget: "string" }
+          - { label: "LinkedIn URL", name: "linkedin_url", widget: "string" }
+          - { label: "Primary Color", name: "primary_color", widget: "string" }
+          - { label: "Secondary Color", name: "secondary_color", widget: "string" }

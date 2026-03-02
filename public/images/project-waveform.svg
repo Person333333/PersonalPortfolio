@@ -1,0 +1,5 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="800" fill="#F7F3EE"/>
+  <path d="M80 400L160 300L240 500L320 260L400 520L480 320L560 500L640 280L720 520L800 300L880 480L960 360L1040 420" stroke="#1C7C6E" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="80" y="140" fill="#101417" font-size="42" font-family="Fraunces">Respiratory Waveform</text>
+</svg>

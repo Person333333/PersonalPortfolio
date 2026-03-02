@@ -1,0 +1,7 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="800" fill="#111827"/>
+  <rect x="140" y="140" width="920" height="520" rx="60" fill="#F7F3EE"/>
+  <circle cx="320" cy="320" r="70" fill="#E4572E"/>
+  <circle cx="760" cy="500" r="70" fill="#1C7C6E"/>
+  <text x="200" y="220" fill="#101417" font-size="42" font-family="Fraunces">AidMap Platform</text>
+</svg>
