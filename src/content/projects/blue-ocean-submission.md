@@ -6,7 +6,7 @@ year: 2026
 category: "Entrepreneurship"
 tags: ["pitch", "innovation"]
 summary: "Competition submission focused on product strategy and community impact."
-hero_image: "/images/project-map.svg"
+hero_image: "/images/project-map.jpg"
 links:
   - label: "Submission Video"
     url: "https://www.youtube.com/watch?v=lVrOf5ASTNM"

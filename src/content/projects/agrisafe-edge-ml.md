@@ -6,10 +6,10 @@ year: 2026
 category: "Food Security"
 tags: ["edge-ml", "sensors", "agriculture", "wssef", "tflite", "random-forest"]
 summary: "Student-led research designing a sensor pipeline and late-fusion edge ML model for crop yield sensitivity forecasting. Patent pending. WSSEF First Place 2026."
-hero_image: "/images/project-agri.svg"
+hero_image: "/images/project-agri.jpg"
 gallery:
-  - "/images/project-agri.svg"
-  - "/images/project-field.svg"
+  - "/images/project-agri.jpg"
+  - "/images/project-field.jpg"
 links:
   - label: "Non-Profit Website"
     url: "https://agridefend.org"

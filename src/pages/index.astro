@@ -57,6 +57,7 @@ const coursework = [
         </div>
       </div>
       <div class="hero-card fade-up-delay">
+        <img src="/images/portrait-nikhil.jpg" alt={profile?.data.full_name} />
         <div class="hero-card-body">
           <p class="eyebrow">Current Coursework</p>
           <ul>
@@ -133,18 +134,28 @@ const coursework = [
     </div>
   </section>
 
-  <!-- ── LEADERSHIP ── -->
+  <!-- ── LEADERSHIP & NON-PROFITS ── -->
   <section class="section section-tight">
-    <div class="container highlight reveal">
-      <div>
-        <p class="eyebrow">Community Impact</p>
-        <h2 class="display">{lead?.data.title}</h2>
-        <p class="subtle">{lead?.data.role}</p>
+    <div class="container">
+      <SectionTitle
+        eyebrow="Community Impact"
+        title="Founder and Lead in Non-Profit Initiatives"
+        description="Leading high-impact work in food security, community health, and educational fundraisers."
+      />
+      <div class="grid grid-2">
+        {leadership.map((item) => (
+          <div class="highlight reveal">
+            <div>
+              <h2 class="display">{item.data.title}</h2>
+              <p class="subtle">{item.data.role}</p>
+            </div>
+            <p>{item.data.impact}</p>
+            {item.data.link && (
+              <a class="text-link" href={item.data.link} target="_blank" rel="noreferrer">Visit organization ↗</a>
+            )}
+          </div>
+        ))}
       </div>
-      <p>{lead?.data.impact}</p>
-      {lead?.data.link && (
-        <a class="text-link" href={lead.data.link} target="_blank" rel="noreferrer">Visit organization ↗</a>
-      )}
     </div>
   </section>
 </BaseLayout>

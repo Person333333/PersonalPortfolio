@@ -6,9 +6,9 @@ year: 2026
 category: "Healthcare Tech"
 tags: ["react-native", "ai", "healthcare", "hackathon", "microsoft"]
 summary: "A care coordination app built for the Seattle Microsoft Divergent Hackathon. Placed 3rd in the Healthcare track."
-hero_image: "/images/project-grid.svg"
+hero_image: "/images/project-grid.jpg"
 gallery:
-  - "/images/project-grid.svg"
+  - "/images/project-grid.jpg"
 links:
   - label: "GitHub"
     url: "https://github.com/CleeYOpro/viceversa"

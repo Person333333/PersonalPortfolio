@@ -6,10 +6,10 @@ year: 2025
 category: "Civic Tech"
 tags: ["mapping", "disaster-response", "hackathon"]
 summary: "Built a two-part platform to map aid requests and coordinate supply drops for disaster response." 
-hero_image: "/images/project-aidmap.svg"
+hero_image: "/images/project-aidmap.jpg"
 gallery:
-  - "/images/project-aidmap.svg"
-  - "/images/project-map.svg"
+  - "/images/project-aidmap.jpg"
+  - "/images/project-map.jpg"
 links:
   - label: "GitHub"
     url: "https://github.com/thesaucemantv/AidMap"

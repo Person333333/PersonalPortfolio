@@ -6,9 +6,9 @@ year: 2025
 category: "FinTech"
 tags: ["web", "budgeting", "fbla"]
 summary: "Built an expense tracker with categories, monthly insights, and clean UX for students." 
-hero_image: "/images/project-finance.svg"
+hero_image: "/images/project-finance.jpg"
 gallery:
-  - "/images/project-finance.svg"
+  - "/images/project-finance.jpg"
 links:
   - label: "FBLA Results"
     url: "https://wafbla.org/wp-content/uploads/2025/05/WA-FBLA-SBLC-Awards-of-Excellence-Results-2025_ALL-EVENTS.pdf"

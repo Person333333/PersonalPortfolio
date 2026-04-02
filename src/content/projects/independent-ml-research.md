@@ -6,9 +6,9 @@ year: 2026
 category: "Machine Learning Research"
 tags: ["augmentation", "ablation", "yamnet", "wav2vec", "audio", "pytorch"]
 summary: "A controlled ablation study evaluating augmentation strategies and pretrained embedding choices for low-sample respiratory audio classification."
-hero_image: "/images/project-grid.svg"
+hero_image: "/images/project-grid.jpg"
 gallery:
-  - "/images/project-waveform.svg"
+  - "/images/project-waveform.jpg"
 featured: false
 ---
 This independent research evaluates augmentation strategies for low-sample respiratory audio classification in a controlled, ablation-style experimental framework.
