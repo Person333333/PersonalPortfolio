@@ -28,35 +28,35 @@ const coursework = [
 ];
 ---
 <BaseLayout>
+  <!-- ── HERO ── -->
   <section class="section hero">
     <div class="container hero-grid">
       <div>
-        <p class="eyebrow">IB Diploma Candidate · Class of 2027</p>
+        <p class="eyebrow fade-up">IB Diploma Candidate · Class of 2027</p>
         <h1 class="display hero-title fade-up">{profile?.data.full_name}</h1>
         <p class="hero-subtitle fade-up-delay">
           Building applied AI systems across healthcare, food security, and civic tech.
         </p>
-        <div class="hero-actions">
+        <div class="hero-actions fade-up-delay">
           <a class="button" href="/projects">View Projects</a>
           <a class="button ghost" href="/contact">Contact</a>
         </div>
-        <div class="hero-meta">
-          <div>
-            <p class="eyebrow">Focus</p>
+        <div class="hero-meta fade-up-delay-2">
+          <div class="meta-item">
+            <p class="meta-label">Focus</p>
             <p class="meta-value">{profile?.data.intended_major}</p>
           </div>
-          <div>
-            <p class="eyebrow">GPA</p>
+          <div class="meta-item">
+            <p class="meta-label">GPA</p>
             <p class="meta-value">{profile?.data.gpa}</p>
           </div>
-          <div>
-            <p class="eyebrow">Testing</p>
+          <div class="meta-item">
+            <p class="meta-label">Testing</p>
             <p class="meta-value">{profile?.data.test_scores}</p>
           </div>
         </div>
       </div>
-      <div class="hero-card">
-        <img src="/images/headshot-placeholder.svg" alt="Portrait placeholder" />
+      <div class="hero-card fade-up-delay">
         <div class="hero-card-body">
           <p class="eyebrow">Current Coursework</p>
           <ul>
@@ -69,6 +69,7 @@ const coursework = [
     </div>
   </section>
 
+  <!-- ── FEATURED PROJECTS ── -->
   <section class="section">
     <div class="container">
       <SectionTitle
@@ -77,13 +78,16 @@ const coursework = [
         description="Selected projects blending applied research, product design, and community impact."
       />
       <div class="grid grid-3">
-        {featuredProjects.map((project) => (
-          <ProjectCard project={project} />
+        {featuredProjects.map((project, i) => (
+          <div class={`reveal reveal-delay-${i + 1}`}>
+            <ProjectCard project={project} />
+          </div>
         ))}
       </div>
     </div>
   </section>
 
+  <!-- ── RESEARCH ── -->
   <section class="section section-accent">
     <div class="container">
       <SectionTitle
@@ -92,8 +96,8 @@ const coursework = [
         description="Controlled studies and field tests with real-world implications."
       />
       <div class="grid grid-2">
-        {topResearch.map((item) => (
-          <article class="card research-card">
+        {topResearch.map((item, i) => (
+          <article class={`card research-card reveal reveal-delay-${i + 1}`}>
             <p class="eyebrow">{item.data.year}</p>
             <h3>{item.data.title}</h3>
             <p class="subtle">{item.data.summary}</p>
@@ -104,6 +108,7 @@ const coursework = [
     </div>
   </section>
 
+  <!-- ── ACHIEVEMENTS ── -->
   <section class="section">
     <div class="container">
       <SectionTitle
@@ -112,14 +117,14 @@ const coursework = [
         description="Selected awards, placements, and honors with proof links."
       />
       <div class="grid grid-2">
-        {sortedAchievements.map((item) => (
-          <article class="card award-card">
+        {sortedAchievements.map((item, i) => (
+          <article class={`card award-card reveal reveal-delay-${(i % 3) + 1}`}>
             <p class="eyebrow">{item.data.year}</p>
             <h3>{item.data.title}</h3>
             <p class="subtle">{item.data.rank} · {item.data.organization}</p>
             {item.data.proof_link && (
               <a class="text-link" href={item.data.proof_link} target="_blank" rel="noreferrer">
-                Proof link
+                View proof ↗
               </a>
             )}
           </article>
@@ -128,8 +133,9 @@ const coursework = [
     </div>
   </section>
 
+  <!-- ── LEADERSHIP ── -->
   <section class="section section-tight">
-    <div class="container highlight">
+    <div class="container highlight reveal">
       <div>
         <p class="eyebrow">Community Impact</p>
         <h2 class="display">{lead?.data.title}</h2>
@@ -137,7 +143,7 @@ const coursework = [
       </div>
       <p>{lead?.data.impact}</p>
       {lead?.data.link && (
-        <a class="text-link" href={lead.data.link} target="_blank" rel="noreferrer">Visit organization</a>
+        <a class="text-link" href={lead.data.link} target="_blank" rel="noreferrer">Visit organization ↗</a>
       )}
     </div>
   </section>

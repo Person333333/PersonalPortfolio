@@ -1,24 +1,29 @@
 ---
-title: "Agrisafe Edge ML for Crop Stress Detection"
+title: "AgriSafe: Crop Stress Detection & Edge ML"
 student_names: "Nikhil V"
 grade: 11
 year: 2026
 category: "Food Security"
-tags: ["edge-ml", "sensors", "agriculture"]
-summary: "Designing a sensor pipeline and edge ML system to forecast crop yield sensitivity and early stress."
+tags: ["edge-ml", "sensors", "agriculture", "wssef", "tflite", "random-forest"]
+summary: "Student-led research designing a sensor pipeline and late-fusion edge ML model for crop yield sensitivity forecasting. Patent pending. WSSEF First Place 2026."
 hero_image: "/images/project-agri.svg"
 gallery:
   - "/images/project-agri.svg"
   - "/images/project-field.svg"
 links:
   - label: "Non-Profit Website"
-    url: "https://agrisafeproject.org"
-  - label: "GitHub"
+    url: "https://agridefend.org"
+  - label: "Crop Stress Detection GitHub"
     url: "https://github.com/Person333333/crop-stress-detection"
-  - label: "Research Talk"
-    url: "https://psu.mediaspace.kaltura.com/media/High+School+ISEF+Research+on+Soil+Respiration%2C+Agroecosystem+Modeling%2C+and+Early+Crop+Stress+Prediction/1_dgjitld9"
+  - label: "AgriSafe App GitHub"
+    url: "https://github.com/Quantum535/AgriSafe-App"
+awards: "WSSEF First Place Award 2026 · Patent Pending"
 featured: true
 ---
-This ongoing research explores low-cost sensing and edge ML techniques to detect early crop stress. The goal is to enable faster interventions and more resilient yield forecasting.
+This independent research project explores low-cost sensor pipelines and edge ML techniques to detect early crop stress, with the goal of enabling faster agricultural interventions and more resilient yield forecasting.
 
-Nikhil has held preliminary discussions with academic mentors and is actively seeking research collaboration. Field testing includes work at a 21 Acres Farm site and preliminary model prototyping for stress classification.
+Nikhil designed a controlled experimental study integrating visual leaf analysis with soil and atmospheric telemetry using a multimodal late-fusion model (CNN + Random Forest), compiled to TFLite for edge deployment.
+
+Co-developed the **AgriSafe App** alongside teammates and wrote a formal research paper with advice from professors in related fields. The project was patent-pending at time of submission and was field-tested at 21 Acres Farm and Hawthorn Farms.
+
+Presented and awarded **WSSEF First Place 2026**.
