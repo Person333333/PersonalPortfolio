@@ -37,29 +37,42 @@ const currentPath = Astro.url.pathname;
     <SiteFooter />
 
     <script>
-      // ── Scroll-reveal ──────────────────────────────────────
-      const observer = new IntersectionObserver(
-        (entries) => {
+      document.addEventListener("DOMContentLoaded", () => {
+        // ── Scroll-reveal ──────────────────────────────────────
+        const observerOptions = { threshold: 0.12, rootMargin: "0px 0px -50px 0px" };
+        const observer = new IntersectionObserver((entries) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
-              entry.target.classList.add("visible");
+              requestAnimationFrame(() => {
+                entry.target.classList.add("visible");
+              });
               observer.unobserve(entry.target);
             }
           });
-        },
-        { threshold: 0.12 }
-      );
+        }, observerOptions);
 
-      document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+        document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
 
-      // ── Header shadow on scroll ────────────────────────────
-      const header = document.querySelector(".site-header");
-      const onScroll = () => {
-        if (header) {
-          header.classList.toggle("scrolled", window.scrollY > 20);
-        }
-      };
-      window.addEventListener("scroll", onScroll, { passive: true });
+        // ── Header shadow on scroll ────────────────────────────
+        const header = document.querySelector(".site-header");
+        let ticking = false;
+
+        const updateHeader = () => {
+          if (header) {
+            header.classList.toggle("scrolled", window.scrollY > 20);
+          }
+          ticking = false;
+        };
+
+        const onScroll = () => {
+          if (!ticking) {
+            requestAnimationFrame(updateHeader);
+            ticking = true;
+          }
+        };
+
+        window.addEventListener("scroll", onScroll, { passive: true });
+      });
     </script>
   </body>
 </html>
